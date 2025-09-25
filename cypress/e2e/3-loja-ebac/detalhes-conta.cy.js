@@ -12,7 +12,7 @@ describe('Funcionalidade: Detalhes daconta', () => {
     it('Deve completar detalhes da conta com sucesso', () => {
          const firstName = faker.person.firstName();
          const lastName = faker.person.lastName();
-         const displayName = `${firstName}_${lastName}`;
+         const displayName = `${firstName}_ ${lastName}`;
         cy.detalhesConta(firstName , lastName, displayName)
         cy.get('.woocommerce-message').should('contain', 'Detalhes da conta modificados')
     });
